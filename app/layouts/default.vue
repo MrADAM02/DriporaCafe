@@ -4,7 +4,7 @@ const { t } = useI18n()
 
 <template>
   <div class="flex min-h-dvh flex-col">
-    <a href="#main" class="sr-only z-50 rounded-full bg-roast px-4 py-2 text-foam focus:not-sr-only focus:fixed focus:start-4 focus:top-3">
+    <a href="#main" class="sr-only z-50 rounded-full bg-roast px-4 py-2 text-foam focus:not-sr-only focus:fixed focus:inset-s-4 focus:top-3">
       {{ t('skip') }}
     </a>
     <AppHeader />

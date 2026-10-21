@@ -94,11 +94,26 @@ useCafeJsonLd()
       </div>
     </section>
 
-    <!-- A day at DRIPORA: the Fajr-to-Fajr idea, spelled out -->
-    <section class="container-page py-20 md:py-28" aria-labelledby="day-title">
-      <h2 id="day-title" class="text-4xl font-bold md:text-5xl">{{ t('day.title') }}</h2>
-      <p class="mt-4 max-w-prose text-lg text-stone">{{ t('day.lede') }}</p>
-      <DayStrip class="mt-12" />
+    <!-- Flavor, the way it should be -->
+    <section class="container-page py-20 md:py-28" aria-labelledby="flavors-title">
+      <div class="grid gap-12 md:grid-cols-[5fr_7fr] md:items-center md:gap-16">
+        <img
+          src="/images/photos/beans-scoop.webp"
+          :alt="t('flavors.imageAlt')"
+          width="442"
+          height="576"
+          loading="lazy"
+          decoding="async"
+          class="mx-auto aspect-442/576 w-full max-w-sm rounded-sm bg-night object-cover md:max-w-none"
+        >
+        <div>
+          <h2 id="flavors-title" class="text-4xl font-bold md:text-5xl">
+            {{ t('flavors.titleA') }}
+            <span class="block text-pistachio-deep">{{ t('flavors.titleB') }}</span>
+          </h2>
+          <FlavorPoints class="mt-12" />
+        </div>
+      </div>
     </section>
 
     <!-- Beans teaser -->

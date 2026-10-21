@@ -13,7 +13,7 @@ export const cafe = {
   socials: { instagram: '', tiktok: '', x: '' }, // TODO real handles; hide icons whose value is empty
   deliveryApps: [] as { name: string; url: string }[], // TODO e.g. HungerStation, Jahez
   // TODO(client): real photos. Paths under /public; while empty, the brand illustrations show instead.
-  photos: { storefront: '', brewing: '' }
+  photos: { storefront: '', brewing: '/images/photos/v60-pour.webp' }
 }
 
 export type Localized = { ar: string; en: string }

@@ -30,9 +30,7 @@ usePageSeo('about')
           loading="lazy"
           class="mx-auto h-auto w-48 md:w-56"
         >
-        <MediaFrame ratio="4 / 3" :photo="cafe.photos.brewing" :alt="t('illo.v60')">
-          <IlloV60 class="size-full" />
-        </MediaFrame>
+        <MediaFrame ratio="900 / 610" :photo="cafe.photos.brewing" :alt="t('about.photoAlt')" />
       </div>
     </div>
   </div>

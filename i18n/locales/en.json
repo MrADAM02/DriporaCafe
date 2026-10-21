@@ -87,7 +87,8 @@
       "filter": "For filter",
       "espresso": "For espresso"
     },
-    "notesSoon": "Tasting notes coming soon"
+    "notesSoon": "Tasting notes coming soon",
+    "bagAlt": "A DRIPORA coffee bag"
   },
   "about": {
     "title": "Our story",
@@ -95,7 +96,8 @@
     "p1": "DRIPORA is a specialty coffee shop in Al Maather, Riyadh. We open at 5 AM and turn the lights off at 3 AM, so we can be the first coffee of your day or the last one.",
     "p2": "The menu is short on purpose: espresso and milk drinks, drip coffee on V60 and Chemex, and cold drinks for the Riyadh summer. The pistachio latte, hot or iced, is the house drink.",
     "p3": "We also have six roasted beans you can take home: three for filter, three for espresso.",
-    "cta": "Visit us"
+    "cta": "Visit us",
+    "photoAlt": "Pouring water over a V60 drip coffee"
   },
   "visit": {
     "title": "Visit us",
@@ -177,37 +179,40 @@
     },
     "ogAlt": "DRIPORA CAFE logo: specialty coffee in Al Maather, Riyadh"
   },
-  "day": {
-    "title": "A day at DRIPORA",
-    "lede": "Twenty-two hours, from fajr to the last cup.",
-    "now": "Now",
-    "stops": {
-      "fajr": {
-        "title": "First cup",
-        "text": "Doors open at fajr. Espresso for those who beat the sun."
-      },
-      "noon": {
-        "title": "Midday heat",
-        "text": "Iced latte, cold brew and mojito for the hot hours."
-      },
-      "evening": {
-        "title": "After maghrib",
-        "text": "Time for a slow V60 or Chemex."
-      },
-      "midnight": {
-        "title": "Midnight",
-        "text": "Still open, and the pistachio latte is waiting."
-      },
-      "last": {
-        "title": "Last cup",
-        "text": "Lights off at 3 AM, back two hours later."
-      }
-    }
-  },
   "illo": {
     "latte": "Illustration of a hot pistachio latte",
     "iced": "Illustration of an iced pistachio latte",
-    "v60": "Illustration of a V60 dripper over a coffee server",
     "storefront": "Illustration of the DRIPORA CAFE storefront at night"
+  },
+  "flavors": {
+    "titleA": "Coffee flavor,",
+    "titleB": "the way it should be",
+    "imageAlt": "Roasted coffee beans in a scoop",
+    "points": {
+      "flow": {
+        "title": "Precise control of the pour",
+        "text": "A slim, curved spout gives you a perfect pour, and a balanced extraction every brew."
+      },
+      "ratio": {
+        "title": "The exact coffee-to-water ratio",
+        "text": "A precise scale means the same flavor every time: consistency you can trust."
+      },
+      "filter": {
+        "title": "Filters that keep the taste clean",
+        "text": "Precisely folded paper holds back sediment and keeps the flavor, for a clean cup every brew."
+      },
+      "timing": {
+        "title": "Timing for a balanced extraction",
+        "text": "A few minutes make the difference between an ordinary coffee and an exceptional one. Timing is the secret of flavor."
+      },
+      "design": {
+        "title": "Elegant design, enjoyable ritual",
+        "text": "Brewing tools that bring beauty and function together, for morning rituals worth every detail."
+      },
+      "gift": {
+        "title": "The perfect gift for coffee lovers",
+        "text": "A set of elegant brewing tools in special packaging, the best gift for anyone who loves the coffee ritual."
+      }
+    }
   }
 }

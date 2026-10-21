@@ -17,8 +17,20 @@ usePageSeo('beans')
 
 <template>
   <div class="container-page pt-10 pb-16 md:pt-16 md:pb-24">
-    <h1 class="text-5xl font-bold md:text-6xl">{{ t('beans.title') }}</h1>
-    <p class="mt-3 max-w-prose text-lg text-stone">{{ t('beans.lede') }}</p>
+    <div class="grid gap-10 md:grid-cols-[3fr_2fr] md:items-center">
+      <div>
+        <h1 class="text-5xl font-bold md:text-6xl">{{ t('beans.title') }}</h1>
+        <p class="mt-4 max-w-prose text-lg text-stone">{{ t('beans.lede') }}</p>
+      </div>
+      <img
+        src="/images/photos/dripora-bag.webp"
+        :alt="t('beans.bagAlt')"
+        width="457"
+        height="576"
+        fetchpriority="high"
+        class="mx-auto aspect-457/576 w-full max-w-xs rounded-sm bg-crema object-cover"
+      >
+    </div>
 
     <section
       v-for="group in groups"

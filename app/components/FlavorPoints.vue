@@ -19,7 +19,7 @@ const points = ['flow', 'ratio', 'filter', 'timing'] as const
           <!-- timer -->
           <g v-else><circle cx="16" cy="18" r="9" /><path d="M16 18v-5M13 5h6M16 5v4M23.5 10.5l1.5-1.5" /></g>
         </svg>
-        <span class="font-display text-3xl font-bold text-line tabular-nums" aria-hidden="true">{{ String(i + 1).padStart(2, '0') }}</span>
+        <span class="font-display text-3xl font-bold text-stone-soft tabular-nums" aria-hidden="true">{{ String(i + 1).padStart(2, '0') }}</span>
       </div>
       <h3 class="mt-4 text-xl font-semibold">{{ t(`flavors.points.${key}.title`) }}</h3>
       <p class="mt-2 text-stone">{{ t(`flavors.points.${key}.text`) }}</p>

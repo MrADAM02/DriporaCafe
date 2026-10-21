@@ -35,7 +35,8 @@ useCafeJsonLd()
 <template>
   <div>
     <!-- Hero: tone follows Riyadh time, computed on the client -->
-    <section :class="night ? 'on-dark grain bg-night text-foam' : 'bg-crema text-roast'">
+    <!-- No grain here: the texture became the LCP element and delayed it -->
+    <section :class="night ? 'on-dark bg-night text-foam' : 'bg-crema text-roast'">
       <div class="container-page grid items-center gap-8 py-16 md:grid-cols-[1.15fr_1fr] md:py-28">
         <div>
           <p class="font-display text-lg md:text-xl" :class="night ? 'text-pistachio' : 'text-pistachio-deep'">

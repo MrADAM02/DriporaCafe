@@ -55,7 +55,10 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/en', '/sitemap.xml', '/robots.txt'],
-      failOnError: true
+      failOnError: true,
+      // Emit menu.html rather than menu/index.html so Netlify serves /menu directly,
+      // instead of 301-redirecting to /menu/ (which also mismatched the canonical URLs).
+      autoSubfolderIndex: false
     }
   }
 })

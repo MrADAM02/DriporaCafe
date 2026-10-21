@@ -7,5 +7,5 @@ const close = computed(() => formatTime(cafe.hours.close, locale.value))
 </script>
 
 <template>
-  <span>{{ t('hours.daily') }}, {{ t('hours.range', { open, close }) }}</span>
+  <span>{{ t('status.pending', { open, close }) }}</span>
 </template>

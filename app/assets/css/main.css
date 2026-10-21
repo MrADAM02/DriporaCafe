@@ -1,13 +1,14 @@
 @import 'tailwindcss';
 
-/* Brand tokens. Proposal from the spec; replace with the client's brand colours once supplied.
+/* Brand tokens. Proposal from the spec, adjusted to the client's logo.
+   --roast is the logo's brown (#4C2B12, sampled from the LAK logo; spec proposal was #2A1B14). 12:1 on --foam.
    Contrast (WCAG AA) checked against --foam:
    - --stone was #8A8079 (3.7:1); darkened to #6B625C (5.7:1) for body-size muted text.
      The original value lives on as --stone-soft for muted text on dark surfaces (4.9:1 on --night).
    - --pistachio is 3.0:1 on --foam, so it's used for accents and on dark surfaces only;
      --pistachio-deep (5.3:1 on --foam, 5.5:1 with white text) carries light-surface CTAs and links. */
 :root {
-  --roast: #2A1B14;
+  --roast: #4C2B12;
   --foam: #FBFAF8;
   --pistachio: #7E9A4E;
   --pistachio-deep: #5A7034;
@@ -85,6 +86,42 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
+  }
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    padding-inline: 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: background-color 150ms, border-color 150ms, color 150ms;
+  }
+  .btn-primary {
+    background: var(--roast);
+    color: var(--foam);
+  }
+  .btn-primary:hover {
+    background: var(--night);
+  }
+  .btn-outline {
+    border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  }
+  .btn-outline:hover {
+    border-color: currentColor;
+  }
+  .link {
+    color: var(--pistachio-deep);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+  .link:hover {
+    color: var(--roast);
   }
 }
 

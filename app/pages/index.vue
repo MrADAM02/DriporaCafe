@@ -2,6 +2,10 @@
 import { cafe } from '~~/data/cafe'
 import { beans } from '~~/data/beans'
 import { menu } from '~~/data/menu'
+import { useLocalized, usePrice } from '~/composables/useLocalized'
+import { useCafeClock } from '~/composables/useCafeClock'
+import { usePageSeo } from '~/composables/usePageSeo'
+import { useCafeJsonLd } from '~/composables/useCafeJsonLd'
 
 const { t } = useI18n()
 const l = useLocalized()
@@ -26,7 +30,6 @@ useCafeJsonLd()
   <div>
     <!-- Hero: tone follows Riyadh time, computed on the client -->
     <section
-      class="transition-colors duration-700"
       :class="night ? 'on-dark bg-night text-foam' : 'bg-crema text-roast'"
     >
       <div class="container-page grid items-center gap-8 py-14 md:grid-cols-[1.15fr_1fr] md:py-24">
@@ -34,7 +37,8 @@ useCafeJsonLd()
           <p class="font-display text-lg" :class="night ? 'text-pistachio' : 'text-pistachio-deep'">
             {{ t(`home.greeting.${mood}`) }}
           </p>
-          <h1 class="mt-3 text-4xl font-bold md:text-6xl">{{ t(`home.headline.${mood}`) }}</h1>
+          <!-- Reserve two lines so the client-side headline swap doesn't shift the layout -->
+          <h1 class="mt-3 min-h-[2lh] text-4xl font-bold md:text-6xl">{{ t(`home.headline.${mood}`) }}</h1>
           <p class="mt-5 max-w-prose text-lg" :class="night ? 'text-foam/80' : 'text-stone'">{{ t('home.lede') }}</p>
 
           <div class="mt-8 flex flex-wrap gap-3">
@@ -45,7 +49,7 @@ useCafeJsonLd()
             >
               {{ t('home.ctaMenu') }}
             </NuxtLinkLocale>
-            <a :href="cafe.mapsUrl" target="_blank" rel="noopener" class="btn btn-outline">
+            <a :href="cafe.mapsUrl" target="_blank" rel="noopener" class="btn btn-outline" :class="night ? 'text-foam' : 'text-roast'">
               <IconDirections class="size-5 rtl:-scale-x-100" />
               {{ t('contact.directions') }}
             </a>
@@ -54,7 +58,7 @@ useCafeJsonLd()
           <OpenStatus class="mt-6" :on-dark="night" />
         </div>
 
-        <div class="mx-auto w-full max-w-sm md:max-w-none">
+        <div class="mx-auto w-full max-w-60 md:max-w-none">
           <HeroHorizon :phase="phase" />
         </div>
       </div>
@@ -62,7 +66,7 @@ useCafeJsonLd()
 
     <!-- Signature drinks -->
     <section class="container-page py-16 md:py-24" aria-labelledby="signature-title">
-      <div class="grid gap-10 md:grid-cols-[1fr_2fr] md:items-end">
+      <div class="grid gap-10 md:grid-cols-[1fr_2fr] md:items-center">
         <div>
           <h2 id="signature-title" class="text-3xl font-bold md:text-4xl">{{ t('home.signatureTitle') }}</h2>
           <p class="mt-3 text-stone">{{ t('home.signatureLede') }}</p>
@@ -73,7 +77,7 @@ useCafeJsonLd()
         </div>
         <ul class="grid grid-cols-2 gap-4 md:gap-6">
           <li v-for="item in signatures" :key="item.id">
-            <PhotoPlaceholder ratio="4 / 5" />
+            <PhotoPlaceholder ratio="1 / 1" />
             <p class="mt-3 font-display text-lg font-medium">{{ l(item.name) }}</p>
             <p class="flex justify-between gap-2 text-sm text-stone">
               <span>{{ l(item.category) }}</span>
@@ -94,11 +98,12 @@ useCafeJsonLd()
         </div>
         <ul class="grid grid-cols-3 gap-3 md:gap-6">
           <li v-for="bean in teaserBeans" :key="bean.id">
+            <!-- Decorative: the name is the caption right below -->
             <img
-              :src="bean.image"
-              :alt="l(bean.name)"
-              width="1000"
-              height="1000"
+              :src="bean.image.replace('.webp', '-480.webp')"
+              alt=""
+              width="480"
+              height="480"
               loading="lazy"
               decoding="async"
               class="aspect-square w-full rounded-sm bg-crema object-cover"

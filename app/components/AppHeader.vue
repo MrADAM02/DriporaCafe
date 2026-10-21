@@ -14,10 +14,10 @@ watch(() => route.fullPath, () => { open.value = false })
 </script>
 
 <template>
-  <header class="sticky top-0 z-40 border-b border-line bg-foam/95 backdrop-blur supports-[backdrop-filter]:bg-foam/85">
+  <header class="sticky top-0 z-40 border-b border-line bg-foam/95 backdrop-blur supports-backdrop-filter:bg-foam/85">
     <div class="container-page flex h-16 items-center gap-2">
       <NuxtLinkLocale to="/" class="me-auto flex items-center gap-2.5" :aria-label="t('nav.logo')">
-        <img src="/images/logo-mark.webp" alt="" width="180" height="162" class="h-9 w-auto">
+        <img src="/images/logo-mark-sm.webp" alt="" width="100" height="90" class="h-9 w-auto">
         <span class="hidden font-display text-lg font-semibold tracking-wide text-roast min-[400px]:inline">{{ t('brand') }}</span>
       </NuxtLinkLocale>
 

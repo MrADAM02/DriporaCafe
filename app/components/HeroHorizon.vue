@@ -14,7 +14,7 @@ defineProps<{ phase: DayPhase | null }>()
     </defs>
 
     <!-- Morning: sun breaking the horizon -->
-    <g class="transition-opacity duration-700" :class="phase === 'night' ? 'opacity-0' : 'opacity-100'">
+    <g :class="phase === 'night' ? 'opacity-0' : 'opacity-100'">
       <circle cx="200" cy="214" r="62" fill="var(--cherry)" clip-path="url(#above-horizon)" />
       <g stroke="var(--cherry)" stroke-width="3" stroke-linecap="round" opacity="0.45">
         <line x1="150" y1="228" x2="250" y2="228" />
@@ -24,7 +24,7 @@ defineProps<{ phase: DayPhase | null }>()
     </g>
 
     <!-- Night: crescent and a few stars -->
-    <g class="transition-opacity duration-700" :class="phase === 'night' ? 'opacity-100' : 'opacity-0'">
+    <g :class="phase === 'night' ? 'opacity-100' : 'opacity-0'">
       <path d="M262 52a52 52 0 1 0 46 76 42 42 0 1 1-46-76Z" fill="var(--foam)" />
       <g fill="var(--stone-soft)">
         <circle cx="96" cy="70" r="2.5" />

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useLocalized, usePrice } from '~/composables/useLocalized'
+import { usePageSeo } from '~/composables/usePageSeo'
 import { menu } from '~~/data/menu'
 
 const { t } = useI18n()

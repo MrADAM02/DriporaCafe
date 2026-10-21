@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useLocalized, usePrice } from '~/composables/useLocalized'
+import { usePageSeo } from '~/composables/usePageSeo'
 import { beans, type BeanType } from '~~/data/beans'
 
 const { t } = useI18n()
@@ -28,10 +30,12 @@ usePageSeo('beans')
         {{ t(`beans.group.${group.type}`) }}
       </h2>
 
-      <ul class="mt-8 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+      <ul class="mt-8 grid gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3">
         <li v-for="bean in group.items" :key="bean.id" class="flex flex-col">
           <img
             :src="bean.image"
+            :srcset="`${bean.image.replace('.webp', '-480.webp')} 480w, ${bean.image} 1000w`"
+            sizes="(min-width: 48rem) 33vw, (min-width: 40rem) 50vw, 100vw"
             :alt="`${l(bean.name)}, ${t(`beans.type.${bean.type}`)}`"
             width="1000"
             height="1000"

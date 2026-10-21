@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useLocalized } from '~/composables/useLocalized';
 import { cafe } from '~~/data/cafe'
 
 const { t } = useI18n()
@@ -9,26 +10,17 @@ const l = useLocalized()
   <div>
     <OpenStatus />
     <dl class="mt-6 grid gap-5">
-      <div class="flex gap-3">
-        <IconPin class="mt-1 size-5 shrink-0 text-stone" />
-        <div>
-          <dt class="text-sm text-stone">{{ t('contact.address') }}</dt>
-          <dd>{{ l(cafe.address) }}</dd>
-        </div>
+      <div>
+        <dt class="flex items-center gap-3 text-sm text-stone"><IconPin class="size-5 shrink-0" />{{ t('contact.address') }}</dt>
+        <dd class="ps-8">{{ l(cafe.address) }}</dd>
       </div>
-      <div class="flex gap-3">
-        <IconClock class="mt-1 size-5 shrink-0 text-stone" />
-        <div>
-          <dt class="text-sm text-stone">{{ t('hours.label') }}</dt>
-          <dd><HoursLine /></dd>
-        </div>
+      <div>
+        <dt class="flex items-center gap-3 text-sm text-stone"><IconClock class="size-5 shrink-0" />{{ t('hours.label') }}</dt>
+        <dd class="ps-8"><HoursLine /></dd>
       </div>
-      <div class="flex gap-3">
-        <IconPhone class="mt-1 size-5 shrink-0 text-stone" />
-        <div>
-          <dt class="text-sm text-stone">{{ t('contact.phone') }}</dt>
-          <dd><a :href="`tel:${cafe.phone}`" class="link"><bdi dir="ltr">{{ cafe.phone }}</bdi></a></dd>
-        </div>
+      <div>
+        <dt class="flex items-center gap-3 text-sm text-stone"><IconPhone class="size-5 shrink-0" />{{ t('contact.phone') }}</dt>
+        <dd class="ps-8"><a :href="`tel:${cafe.phone}`" class="link"><bdi dir="ltr">{{ cafe.phone }}</bdi></a></dd>
       </div>
     </dl>
     <div class="mt-8 flex flex-wrap gap-3">

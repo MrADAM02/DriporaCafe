@@ -1,6 +1,8 @@
 [build]
   command = "npm run generate"
-  publish = ".output/public"
+  # On Netlify, Nuxt auto-selects the netlify-static preset, which writes to dist/
+  # (with _headers for immutable asset caching and _redirects for the 404 page).
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22"

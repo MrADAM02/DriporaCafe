@@ -26,11 +26,13 @@ New website for **DRIPORA CAFE**, a specialty coffee shop in Al Maather, Riyadh.
 ```toml
 [build]
   command = "npm run generate"
-  publish = ".output/public"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22"
 ```
+
+On Netlify, Nuxt auto-selects the `netlify-static` preset, which outputs to `dist/` (not `.output/public`, which is only used for local builds). Publishing `.output/public` fails with "Deploy directory does not exist".
 
 Every page, in both locales, must be prerendered. Check that `/`, `/en`, `/menu`, `/en/menu` and the other routes all exist as HTML in the output.
 

@@ -1,6 +1,181 @@
 {
+  "brand": "DRIPORA",
+  "skip": "Skip to content",
+  "nav": {
+    "label": "Main navigation",
+    "home": "Home",
+    "menu": "Menu",
+    "beans": "Beans",
+    "about": "About",
+    "visit": "Visit",
+    "open": "Open menu",
+    "close": "Close menu",
+    "logo": "DRIPORA CAFE, home"
+  },
+  "lang": {
+    "short": "ع",
+    "name": "العربية",
+    "label": "اعرض هذه الصفحة بالعربية"
+  },
+  "whatsapp": {
+    "short": "WhatsApp",
+    "chat": "Message us on WhatsApp",
+    "order": "Order on WhatsApp",
+    "orderLabel": "Order {name} on WhatsApp",
+    "general": "Hello DRIPORA 🌿",
+    "orderBean": "Hello, I'd like to order the {name} coffee ({type}) 🌿"
+  },
+  "price": "SAR {amount}",
+  "external": "(opens in a new tab)",
+  "hours": {
+    "label": "Opening hours",
+    "daily": "Daily",
+    "range": "{open} to {close}",
+    "note": "We close after midnight"
+  },
+  "status": {
+    "open": "Open now",
+    "closed": "Closed now",
+    "closesAt": "Closes {time}",
+    "opensAt": "Opens {time}",
+    "pending": "Daily, {open} to {close}"
+  },
+  "contact": {
+    "address": "Address",
+    "phone": "Phone",
+    "call": "Call us",
+    "directions": "Get directions",
+    "follow": "Follow us"
+  },
   "home": {
-    "title": "DRIPORA CAFE",
-    "lede": "Specialty coffee in Al Maather, from fajr to fajr."
+    "greeting": {
+      "neutral": "Welcome",
+      "morning": "Good morning",
+      "night": "Good evening"
+    },
+    "headline": {
+      "neutral": "From fajr to fajr.",
+      "morning": "The first cup, before sunrise.",
+      "night": "The last cup, well past midnight."
+    },
+    "lede": "Specialty coffee in Al Maather, Riyadh. We open at 5 AM and close at 3 AM, every day.",
+    "ctaMenu": "See the menu",
+    "signatureTitle": "Our signature: the pistachio latte",
+    "signatureLede": "The house drink, hot or iced.",
+    "beansTitle": "Take the coffee home",
+    "beansLede": "Six roasted beans: three for filter, three for espresso. Ordered on WhatsApp.",
+    "beansCta": "Browse the beans",
+    "visitTitle": "Visit us",
+    "visitLede": "In Al Maather, open until 3 AM."
+  },
+  "menu": {
+    "title": "Menu",
+    "lede": "Prices in Saudi riyals.",
+    "jump": "Menu sections",
+    "signature": "Signature",
+    "beansNote": "Liked the drip? The same beans are for sale.",
+    "beansLink": "Browse the beans"
+  },
+  "beans": {
+    "title": "Coffee beans",
+    "lede": "Six roasted beans, one price. Order on WhatsApp and we'll take it from there.",
+    "type": {
+      "filter": "Filter",
+      "espresso": "Espresso"
+    },
+    "group": {
+      "filter": "For filter",
+      "espresso": "For espresso"
+    },
+    "notesSoon": "Tasting notes coming soon"
+  },
+  "about": {
+    "title": "Our story",
+    "lede": "A small café in Al Maather, with unusual hours.",
+    "p1": "DRIPORA is a specialty coffee shop in Al Maather, Riyadh. We open at 5 AM and turn the lights off at 3 AM, so we can be the first coffee of your day or the last one.",
+    "p2": "The menu is short on purpose: espresso and milk drinks, drip coffee on V60 and Chemex, and cold drinks for the Riyadh summer. The pistachio latte, hot or iced, is the house drink.",
+    "p3": "We also have six roasted beans you can take home: three for filter, three for espresso.",
+    "cta": "Visit us"
+  },
+  "visit": {
+    "title": "Visit us",
+    "lede": "We're in Al Maather, Riyadh. Open every day from fajr until 3 AM.",
+    "map": "Map",
+    "showMap": "Show map",
+    "mapNote": "Loading the map fetches content from Google.",
+    "mapTitle": "DRIPORA CAFE on Google Maps",
+    "openInMaps": "Open in Google Maps",
+    "delivery": "Order delivery"
+  },
+  "policies": {
+    "returns": "Returns policy",
+    "privacy": "Privacy policy",
+    "draft": "Draft under review. The final text will be confirmed soon.",
+    "updated": "Last updated: {date}"
+  },
+  "returns": {
+    "intro": "This policy is carried over from our previous online store and applies to our coffee beans.",
+    "h1": "Exchanges and returns within 7 days",
+    "p1": "You can exchange or return a product within seven days of receiving it. After seven days, exchanges and returns are no longer possible.",
+    "h2": "Conditions",
+    "p2": "The product must be in good condition and unused, and we may inspect it before accepting an exchange or return. Shipping costs for exchanges and returns are paid by the customer; if the product is faulty or we made a mistake, we will make it right.",
+    "h3": "When exchanges and returns don't apply",
+    "p3": "If a defect is caused by improper storage or handling, or if the product was prepared to a special request (unless it is faulty or doesn't match what was requested). To start a return, message us on WhatsApp."
+  },
+  "privacy": {
+    "intro": "This explains how we handle information when you use our website.",
+    "h1": "What we collect",
+    "p1": "This website has no accounts and no forms, and doesn't collect personal data. When you order on WhatsApp, we use your number and message only to complete your order, and we keep your personal and contact details strictly confidential.",
+    "h2": "Third-party services",
+    "p2": "The Google map only loads if you ask to see it, at which point Google's privacy policy applies. Orders on WhatsApp are covered by WhatsApp's policy.",
+    "h3": "Contact",
+    "p3": "For any question about your privacy, message us on WhatsApp or give us a call."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "lede": "Looks like this page spilled. Try one of these instead:",
+    "home": "Home",
+    "menu": "Menu"
+  },
+  "footer": {
+    "policies": "Policies",
+    "rights": "© {year} DRIPORA CAFE"
+  },
+  "photo": "Photo coming",
+  "seo": {
+    "siteName": "DRIPORA CAFE",
+    "home": {
+      "title": "DRIPORA CAFE | Specialty coffee in Al Maather, Riyadh",
+      "description": "Specialty coffee shop in Al Maather, Riyadh, open daily from 5 AM to 3 AM. See the menu, hours and directions, and order our coffee beans on WhatsApp."
+    },
+    "menu": {
+      "title": "Menu",
+      "description": "The DRIPORA CAFE menu: hot and cold drinks, V60 and Chemex drip coffee, and the pistachio latte. Prices in Saudi riyals."
+    },
+    "beans": {
+      "title": "Coffee beans",
+      "description": "Six roasted coffee beans from DRIPORA: Uganda, Ethiopia, Elite Blend, Brazil, Colombia and Special Blend. Order on WhatsApp."
+    },
+    "about": {
+      "title": "Our story",
+      "description": "DRIPORA is a specialty coffee shop in Al Maather, Riyadh, open from fajr until 3 AM."
+    },
+    "visit": {
+      "title": "Visit us",
+      "description": "DRIPORA CAFE's address in Al Maather, Riyadh, with opening hours, map, phone and WhatsApp."
+    },
+    "returns": {
+      "title": "Returns policy",
+      "description": "Returns and replacements for DRIPORA CAFE coffee beans."
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "description": "How the DRIPORA CAFE website handles your information."
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "We couldn't find that page. Browse the menu or head back home."
+    },
+    "ogAlt": "DRIPORA CAFE logo: specialty coffee in Al Maather, Riyadh"
   }
 }

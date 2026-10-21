@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 // Copy from the client's own site (screenshot supplied 2026-10-21). Icons are line drawings in the brand stroke.
-const points = ['flow', 'ratio', 'filter', 'timing', 'design', 'gift'] as const
+const points = ['flow', 'ratio', 'filter', 'timing'] as const
 </script>
 
 <template>
@@ -17,11 +17,7 @@ const points = ['flow', 'ratio', 'filter', 'timing', 'design', 'gift'] as const
           <!-- paper filter -->
           <g v-else-if="key === 'filter'"><path d="M6 8h20l-7 16h-6Z" /><path d="M12 8l3 16M20 8l-3 16" opacity="0.5" /></g>
           <!-- timer -->
-          <g v-else-if="key === 'timing'"><circle cx="16" cy="18" r="9" /><path d="M16 18v-5M13 5h6M16 5v4M23.5 10.5l1.5-1.5" /></g>
-          <!-- cup with sparkle -->
-          <g v-else-if="key === 'design'"><path d="M6 15h16v4a7 7 0 0 1-7 7h-2a7 7 0 0 1-7-7Z" /><path d="M22 17h1a3 3 0 0 1 0 6h-2" /><path d="M24 4v6M21 7h6" /></g>
-          <!-- gift -->
-          <g v-else><rect x="6" y="13" width="20" height="14" rx="1.5" /><path d="M4 9h24v4H4ZM16 9v18" /><path d="M16 9c-2-4-7-4-6-1s6 1 6 1c2-4 7-4 6-1s-6 1-6 1" /></g>
+          <g v-else><circle cx="16" cy="18" r="9" /><path d="M16 18v-5M13 5h6M16 5v4M23.5 10.5l1.5-1.5" /></g>
         </svg>
         <span class="font-display text-3xl font-bold text-line tabular-nums" aria-hidden="true">{{ String(i + 1).padStart(2, '0') }}</span>
       </div>

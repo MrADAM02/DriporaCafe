@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+/* Brand tokens. Proposal from the spec; replace with the client's brand colours once supplied.
+   Contrast (WCAG AA) checked against --foam:
+   - --stone was #8A8079 (3.7:1); darkened to #6B625C (5.7:1) for body-size muted text.
+     The original value lives on as --stone-soft for muted text on dark surfaces (4.9:1 on --night).
+   - --pistachio is 3.0:1 on --foam, so it's used for accents and on dark surfaces only;
+     --pistachio-deep (5.3:1 on --foam, 5.5:1 with white text) carries light-surface CTAs and links. */
+:root {
+  --roast: #2A1B14;
+  --foam: #FBFAF8;
+  --pistachio: #7E9A4E;
+  --pistachio-deep: #5A7034;
+  --cherry: #9E3A2E;
+  --night: #14100D;
+  --stone: #6B625C;
+  --stone-soft: #8A8079;
+  --crema: #F1ECE6;
+  --line: #E4DDD5;
+}
+
+@theme inline {
+  --color-roast: var(--roast);
+  --color-foam: var(--foam);
+  --color-pistachio: var(--pistachio);
+  --color-pistachio-deep: var(--pistachio-deep);
+  --color-cherry: var(--cherry);
+  --color-night: var(--night);
+  --color-stone: var(--stone);
+  --color-stone-soft: var(--stone-soft);
+  --color-crema: var(--crema);
+  --color-line: var(--line);
+
+  --font-display: 'Alexandria', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  --font-sans: 'IBM Plex Sans Arabic', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    background: var(--foam);
+    color: var(--roast);
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Arabic body copy: generous leading, never letter-spaced. */
+  :lang(ar) body {
+    line-height: 1.8;
+  }
+  :lang(ar) * {
+    letter-spacing: 0 !important;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--pistachio-deep);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  .on-dark :focus-visible,
+  .on-dark:focus-visible {
+    outline-color: var(--pistachio);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 48rem) {
+    padding-inline: 2rem;
+  }
+}

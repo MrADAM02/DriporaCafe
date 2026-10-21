@@ -1,0 +1,24 @@
+{
+  "name": "dripora-cafe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "test": "vitest run",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^1.0.1",
+    "@nuxtjs/i18n": "^10.6.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "nuxt": "^4.6.2",
+    "tailwindcss": "^4.3.3"
+  }
+}

@@ -13,7 +13,7 @@ usePageSeo('menu')
 <template>
   <div>
     <div class="container-page pt-10 pb-6 md:pt-16">
-      <h1 class="text-4xl font-bold md:text-5xl">{{ t('menu.title') }}</h1>
+      <h1 class="text-5xl font-bold md:text-6xl">{{ t('menu.title') }}</h1>
       <p class="mt-2 text-stone">{{ t('menu.lede') }}</p>
     </div>
 

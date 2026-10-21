@@ -18,6 +18,8 @@
   --stone-soft: #8A8079;
   --crema: #F1ECE6;
   --line: #E4DDD5;
+  /* Soft pistachio surface for the signature section. --roast is 11:1 on it, --pistachio-deep 4.6:1. */
+  --pistachio-wash: #E8EDDA;
 }
 
 @theme inline {
@@ -31,6 +33,7 @@
   --color-stone-soft: var(--stone-soft);
   --color-crema: var(--crema);
   --color-line: var(--line);
+  --color-pistachio-wash: var(--pistachio-wash);
 
   --font-display: 'Alexandria', 'IBM Plex Sans Arabic', system-ui, sans-serif;
   --font-sans: 'IBM Plex Sans Arabic', system-ui, sans-serif;
@@ -122,6 +125,22 @@
   }
   .link:hover {
     color: var(--roast);
+  }
+}
+
+/* Fine film grain over dark surfaces. Sits between the element's background and its content. */
+@utility grain {
+  position: relative;
+  isolation: isolate;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.16;
+    mix-blend-mode: overlay;
   }
 }
 

@@ -11,7 +11,9 @@ export const cafe = {
   // Daily, closing after midnight. TODO confirm with client.
   hours: { open: '05:00', close: '03:00', timezone: 'Asia/Riyadh' },
   socials: { instagram: '', tiktok: '', x: '' }, // TODO real handles; hide icons whose value is empty
-  deliveryApps: [] as { name: string; url: string }[] // TODO e.g. HungerStation, Jahez
+  deliveryApps: [] as { name: string; url: string }[], // TODO e.g. HungerStation, Jahez
+  // TODO(client): real photos. Paths under /public; while empty, the brand illustrations show instead.
+  photos: { storefront: '', brewing: '' }
 }
 
 export type Localized = { ar: string; en: string }

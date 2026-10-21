@@ -141,7 +141,6 @@
     "policies": "Policies",
     "rights": "© {year} DRIPORA CAFE"
   },
-  "photo": "Photo coming",
   "seo": {
     "siteName": "DRIPORA CAFE",
     "home": {
@@ -177,5 +176,38 @@
       "description": "We couldn't find that page. Browse the menu or head back home."
     },
     "ogAlt": "DRIPORA CAFE logo: specialty coffee in Al Maather, Riyadh"
+  },
+  "day": {
+    "title": "A day at DRIPORA",
+    "lede": "Twenty-two hours, from fajr to the last cup.",
+    "now": "Now",
+    "stops": {
+      "fajr": {
+        "title": "First cup",
+        "text": "Doors open at fajr. Espresso for those who beat the sun."
+      },
+      "noon": {
+        "title": "Midday heat",
+        "text": "Iced latte, cold brew and mojito for the hot hours."
+      },
+      "evening": {
+        "title": "After maghrib",
+        "text": "Time for a slow V60 or Chemex."
+      },
+      "midnight": {
+        "title": "Midnight",
+        "text": "Still open, and the pistachio latte is waiting."
+      },
+      "last": {
+        "title": "Last cup",
+        "text": "Lights off at 3 AM, back two hours later."
+      }
+    }
+  },
+  "illo": {
+    "latte": "Illustration of a hot pistachio latte",
+    "iced": "Illustration of an iced pistachio latte",
+    "v60": "Illustration of a V60 dripper over a coffee server",
+    "storefront": "Illustration of the DRIPORA CAFE storefront at night"
   }
 }

@@ -17,7 +17,7 @@ usePageSeo('beans')
 
 <template>
   <div class="container-page pt-10 pb-16 md:pt-16 md:pb-24">
-    <h1 class="text-4xl font-bold md:text-5xl">{{ t('beans.title') }}</h1>
+    <h1 class="text-5xl font-bold md:text-6xl">{{ t('beans.title') }}</h1>
     <p class="mt-3 max-w-prose text-lg text-stone">{{ t('beans.lede') }}</p>
 
     <section

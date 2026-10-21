@@ -31,18 +31,20 @@ usePageSeo('beans')
       </h2>
 
       <ul class="mt-8 grid gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3">
-        <li v-for="bean in group.items" :key="bean.id" class="flex flex-col">
-          <img
-            :src="bean.image"
-            :srcset="`${bean.image.replace('.webp', '-480.webp')} 480w, ${bean.image} 1000w`"
-            sizes="(min-width: 48rem) 33vw, (min-width: 40rem) 50vw, 100vw"
-            :alt="`${l(bean.name)}, ${t(`beans.type.${bean.type}`)}`"
-            width="1000"
-            height="1000"
-            loading="lazy"
-            decoding="async"
-            class="aspect-square w-full rounded-sm bg-crema object-cover"
-          >
+        <li :id="bean.id" v-for="bean in group.items" :key="bean.id" class="group flex scroll-mt-24 flex-col">
+          <div class="overflow-hidden rounded-sm bg-crema">
+            <img
+              :src="bean.image"
+              :srcset="`${bean.image.replace('.webp', '-480.webp')} 480w, ${bean.image} 1000w`"
+              sizes="(min-width: 48rem) 33vw, (min-width: 40rem) 50vw, 100vw"
+              :alt="`${l(bean.name)}, ${t(`beans.type.${bean.type}`)}`"
+              width="1000"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+              class="aspect-square w-full object-cover transition duration-500 ease-out motion-safe:group-hover:scale-105"
+            >
+          </div>
           <div class="mt-4 flex items-baseline justify-between gap-3">
             <h3 class="text-xl font-semibold">{{ l(bean.name) }}</h3>
             <p class="shrink-0 font-display font-medium">{{ price(bean.price) }}</p>

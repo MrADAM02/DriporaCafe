@@ -98,17 +98,21 @@ useCafeJsonLd()
         </div>
         <ul class="grid grid-cols-3 gap-3 md:gap-6">
           <li v-for="bean in teaserBeans" :key="bean.id">
-            <!-- Decorative: the name is the caption right below -->
-            <img
-              :src="bean.image.replace('.webp', '-480.webp')"
-              alt=""
-              width="480"
-              height="480"
-              loading="lazy"
-              decoding="async"
-              class="aspect-square w-full rounded-sm bg-crema object-cover"
-            >
-            <p class="mt-2 text-sm font-medium">{{ l(bean.name) }}</p>
+            <NuxtLinkLocale :to="{ path: '/beans', hash: `#${bean.id}` }" class="group block">
+              <div class="overflow-hidden rounded-sm bg-crema">
+                <!-- Decorative: the name is the caption right below -->
+                <img
+                  :src="bean.image.replace('.webp', '-480.webp')"
+                  alt=""
+                  width="480"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-square w-full object-cover transition duration-500 ease-out motion-safe:group-hover:scale-105 group-hover:brightness-105"
+                >
+              </div>
+              <p class="mt-2 text-sm font-medium underline-offset-4 group-hover:underline">{{ l(bean.name) }}</p>
+            </NuxtLinkLocale>
           </li>
         </ul>
       </div>

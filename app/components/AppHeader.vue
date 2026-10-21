@@ -16,9 +16,9 @@ watch(() => route.fullPath, () => { open.value = false })
 <template>
   <header class="sticky top-0 z-40 border-b border-line bg-foam/95 backdrop-blur supports-backdrop-filter:bg-foam/85">
     <div class="container-page flex h-16 items-center gap-2">
-      <NuxtLinkLocale to="/" class="me-auto flex items-center gap-2.5" :aria-label="t('nav.logo')">
-        <img src="/images/logo-mark-sm.webp" alt="" width="100" height="90" class="h-9 w-auto">
-        <span class="hidden font-display text-lg font-semibold tracking-wide text-roast min-[400px]:inline">{{ t('brand') }}</span>
+      <!-- Bilingual lockup from the logo artwork: identical in both languages -->
+      <NuxtLinkLocale to="/" class="me-auto flex items-center" :aria-label="t('nav.logo')">
+        <img src="/images/logo-horizontal.webp" alt="" width="388" height="96" class="h-9 w-auto sm:h-10">
       </NuxtLinkLocale>
 
       <nav :aria-label="t('nav.label')" class="hidden md:block">
@@ -36,7 +36,7 @@ watch(() => route.fullPath, () => { open.value = false })
 
       <LangSwitcher />
 
-      <WhatsAppButton size="sm" :label="t('whatsapp.short')" :aria-label="t('whatsapp.chat')" />
+      <WhatsAppButton size="sm" compact :label="t('whatsapp.short')" :aria-label="t('whatsapp.chat')" />
 
       <button
         type="button"

@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
+import { process } from 'std-env'
 
 const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || process.env.URL || 'https://dripora.netlify.app'
 

@@ -12,9 +12,8 @@ const hasSocials = Object.values(cafe.socials).some(Boolean)
   <footer class="on-dark bg-roast text-foam">
     <div class="container-page grid gap-10 py-14 md:grid-cols-3">
       <div>
-        <img src="/images/logo-mark-sm.webp" alt="" width="100" height="90" class="h-12 w-auto brightness-0 invert" loading="lazy">
-        <p class="mt-4 font-display text-xl">{{ l(cafe.name) }}</p>
-        <p class="mt-1 text-foam/75">{{ t('home.headline.neutral') }}</p>
+        <img src="/images/logo-horizontal.webp" :alt="l(cafe.name)" width="388" height="96" class="h-12 w-auto brightness-0 invert" loading="lazy">
+        <p class="mt-4 text-foam/75">{{ t('home.headline.neutral') }}</p>
       </div>
 
       <dl class="grid gap-5">

@@ -17,6 +17,9 @@ const signatures = menu.flatMap(category =>
     .map(item => ({ ...item, category: category.name }))
 )
 const teaserBeans = beans.slice(0, 3)
+
+usePageSeo('home')
+useCafeJsonLd()
 </script>
 
 <template>

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 // TODO(client): replace with the real brand story when it arrives.
 const { t } = useI18n()
+
+usePageSeo('about')
 </script>
 
 <template>

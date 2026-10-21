@@ -3,6 +3,9 @@ import { cafe } from '~~/data/cafe'
 
 const { t } = useI18n()
 const hasSocials = Object.values(cafe.socials).some(Boolean)
+
+usePageSeo('visit')
+useCafeJsonLd()
 </script>
 
 <template>

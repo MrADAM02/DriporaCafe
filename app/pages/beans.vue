@@ -9,6 +9,8 @@ const groups = (['filter', 'espresso'] as BeanType[]).map(type => ({
   type,
   items: beans.filter(bean => bean.type === type)
 }))
+
+usePageSeo('beans')
 </script>
 
 <template>

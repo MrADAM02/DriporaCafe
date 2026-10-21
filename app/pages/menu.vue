@@ -4,6 +4,8 @@ import { menu } from '~~/data/menu'
 const { t } = useI18n()
 const l = useLocalized()
 const price = usePrice()
+
+usePageSeo('menu')
 </script>
 
 <template>
@@ -14,7 +16,7 @@ const price = usePrice()
     </div>
 
     <!-- Category jump links, sticky under the header -->
-    <nav :aria-label="t('menu.jump')" class="sticky top-16 z-30 border-y border-line bg-foam/95 backdrop-blur supports-[backdrop-filter]:bg-foam/85">
+    <nav :aria-label="t('menu.jump')" class="sticky top-16 z-30 border-y border-line bg-foam/95 backdrop-blur supports-backdrop-filter:bg-foam/85">
       <ul class="container-page flex gap-2 overflow-x-auto py-2">
         <li v-for="category in menu" :key="category.id" class="shrink-0">
           <a

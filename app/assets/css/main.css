@@ -144,6 +144,12 @@
   }
 }
 
+/* Unlayered on purpose: Tailwind's text-* sizes set line-height 1–1.1, which collides Arabic
+   headings across lines (tall ascenders and deep descenders). This wins over the utility layer. */
+:lang(ar) :is(h1, h2, h3, h4) {
+  line-height: 1.45;
+}
+
 @utility container-page {
   width: 100%;
   max-width: 72rem;

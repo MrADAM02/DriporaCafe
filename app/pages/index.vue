@@ -70,7 +70,7 @@ useCafeJsonLd()
 
     <!-- Signature drinks -->
     <section class="bg-pistachio-wash" aria-labelledby="signature-title">
-      <div class="container-page grid gap-12 py-20 md:grid-cols-[1fr_2fr] md:items-center md:py-28">
+      <div class="container-page grid gap-12 py-20 md:grid-cols-[2fr_3fr] md:items-center md:py-28">
         <div>
           <h2 id="signature-title" class="text-4xl font-bold md:text-5xl">{{ t('home.signatureTitle') }}</h2>
           <p class="mt-4 text-lg text-stone">{{ t('home.signatureLede') }}</p>
@@ -81,7 +81,7 @@ useCafeJsonLd()
         </div>
         <ul class="grid grid-cols-2 gap-4 md:gap-8">
           <li v-for="item in signatures" :key="item.id">
-            <MediaFrame tone="foam" :photo="item.image" :alt="item.illo ? t(item.illo.alt) : l(item.name)">
+            <MediaFrame tone="foam" :photo="item.image" :alt="item.image || !item.illo ? l(item.name) : t(item.illo.alt)">
               <component :is="item.illo.component" v-if="item.illo" class="size-full" />
             </MediaFrame>
             <p class="mt-4 font-display text-lg font-semibold md:text-xl">{{ l(item.name) }}</p>
@@ -154,9 +154,15 @@ useCafeJsonLd()
           <p class="mt-4 text-lg text-stone">{{ t('home.visitLede') }}</p>
           <VisitSummary class="mt-8" />
         </div>
-        <MediaFrame ratio="4 / 3" tone="night" :photo="cafe.photos.storefront" :alt="t('illo.storefront')">
-          <IlloStorefront class="size-full" />
-        </MediaFrame>
+        <img
+          src="/images/photos/dripora-cup.webp"
+          :alt="t('home.cupAlt')"
+          width="400"
+          height="400"
+          loading="lazy"
+          decoding="async"
+          class="mx-auto aspect-square w-full max-w-sm rounded-sm bg-night object-cover"
+        >
       </div>
     </section>
   </div>

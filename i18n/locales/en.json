@@ -66,7 +66,8 @@
     "beansLede": "Six roasted beans: three for filter, three for espresso. Ordered on WhatsApp.",
     "beansCta": "Browse the beans",
     "visitTitle": "Visit us",
-    "visitLede": "In Al Maather, open until 3 AM."
+    "visitLede": "In Al Maather, open until 3 AM.",
+    "cupAlt": "A DRIPORA coffee cup"
   },
   "menu": {
     "title": "Menu",
@@ -181,8 +182,7 @@
   },
   "illo": {
     "latte": "Illustration of a hot pistachio latte",
-    "iced": "Illustration of an iced pistachio latte",
-    "storefront": "Illustration of the DRIPORA CAFE storefront at night"
+    "iced": "Illustration of an iced pistachio latte"
   },
   "flavors": {
     "titleA": "Coffee flavor,",

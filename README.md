@@ -30,12 +30,12 @@ npm install
 npm run dev        # http://localhost:3000
 ```
 
-| Script | What it does |
-|---|---|
-| `npm run dev` | Dev server with hot reload |
+| Script               | What it does                                                                                   |
+| -------------------- | ---------------------------------------------------------------------------------------------- |
+| `npm run dev`      | Dev server with hot reload                                                                     |
 | `npm run generate` | Static build of every page in both languages into `.output/public` (or `dist/` on Netlify) |
-| `npm run preview` | Serve the last build locally |
-| `npm test` | Run the unit tests (opening-hours logic) |
+| `npm run preview`  | Serve the last build locally                                                                   |
+| `npm test`         | Run the unit tests (opening-hours logic)                                                       |
 
 ## Project structure
 
@@ -60,14 +60,14 @@ test/               Vitest tests
 
 Most changes don't need any component code.
 
-| To change… | Edit |
-|---|---|
-| Phone, WhatsApp number, address, hours, map link | `data/cafe.ts` |
-| Social links (Instagram, TikTok, X) | `cafe.socials` in `data/cafe.ts`. Empty values stay hidden. |
-| Delivery apps | `cafe.deliveryApps` in `data/cafe.ts`. The section appears once the list has entries. |
-| Menu items and prices | `data/menu.ts` |
-| Bean products, weights, tasting notes | `data/beans.ts` |
-| Any text on the site (headings, buttons, About text, policies) | `i18n/locales/ar.json` and `i18n/locales/en.json`. Always update both. |
+| To change…                                                    | Edit                                                                                      |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Phone, WhatsApp number, address, hours, map link               | `data/cafe.ts`                                                                          |
+| Social links (Instagram, TikTok, X)                            | `cafe.socials` in `data/cafe.ts`. Empty values stay hidden.                           |
+| Delivery apps                                                  | `cafe.deliveryApps` in `data/cafe.ts`. The section appears once the list has entries. |
+| Menu items and prices                                          | `data/menu.ts`                                                                          |
+| Bean products, weights, tasting notes                          | `data/beans.ts`                                                                         |
+| Any text on the site (headings, buttons, About text, policies) | `i18n/locales/ar.json` and `i18n/locales/en.json`. Always update both.                |
 
 **Adding photos:** put the file in `public/images/photos/` (WebP, about 800px wide), then reference it:
 
@@ -84,17 +84,3 @@ Netlify builds automatically on every push to `main`. The settings live in [netl
 - Publish directory: `dist`. On Netlify, Nuxt switches to its `netlify-static` preset, which writes to `dist/` and adds asset caching headers and the 404 redirect.
 
 The site URL used for canonical links, the sitemap and social previews comes from Netlify automatically. When the real domain is connected, set `NUXT_PUBLIC_SITE_URL` (for example `https://dripora-sa.com`) in Netlify's environment variables.
-
-## Before launch
-
-These items are waiting on the client. Each one is also marked with a `TODO` comment in the code.
-
-- [ ] Confirm the rights to the pistachio latte and cup photos, or replace them with the café's own (`data/menu.ts`, `public/images/photos/`)
-- [ ] Vector logo (the current logo is cropped from the old site)
-- [ ] Confirm menu prices, "Mikato" (assumed macchiato) and the frappuccino category
-- [ ] Bean weights, roast levels and tasting notes
-- [ ] Arabic brand-name spelling, full Arabic address and confirmed hours
-- [ ] Social handles and delivery-app links
-- [ ] Brand story for `/about`
-- [ ] Final wording for the returns and privacy policies
-- [ ] Domain registrar access, to move `dripora-sa.com` from LAK to Netlify
